@@ -168,21 +168,13 @@ namespace csharp_functions
 
             Console.WriteLine("Inserisci un numero di elementi di un array su cui vuoi lavorare: ");
 
-            while (int.TryParse(Console.ReadLine(), out UserInput) == false)
-            {
-                Console.WriteLine("Sintassi errata. Inserisci numero");
-            }
             UserInput = Convert.ToInt32(Console.ReadLine());
+
             int[] UserArray = new int[UserInput];
 
             Console.WriteLine("Adesso inserisci il primo numero:");
             for (int i = 0; i < UserInput; i++)
             {
-                while (int.TryParse(Console.ReadLine(), out UserInput) == false)
-                {
-                    Console.WriteLine("Sintassi errata. Inserisci numero");
-                }
-
                 Console.WriteLine("Continua: ");
 
                 UserArray[i] = Convert.ToInt32(Console.ReadLine());
